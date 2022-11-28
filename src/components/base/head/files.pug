@@ -1,0 +1,61 @@
+include ./pathConfig.pug
+
+//- LIBS links
+//- font awesome
+link(rel="stylesheet" href=pathTo.lib.fontAwesome.css integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer")
+
+//- Google Fonts 
+link(rel="preconnect" href=pathTo.lib.googleFonts.api)
+link(rel="preconnect" href=pathTo.lib.googleFonts.static, crossorigin)
+link(href=pathTo.lib.googleFonts.Inter rel="stylesheet")
+
+//- Owl Carousel 
+link(rel="stylesheet" href=pathTo.lib.owlCarousel.base)
+link(rel="stylesheet" href=pathTo.lib.owlCarousel.theme)
+link(rel="stylesheet" href=pathTo.lib.owlCarousel.custom)
+
+//- INTERNAL pathTo.lib
+//- fonts
+link(rel="stylesheet" href=pathTo.lib.fonts.Bandera)
+
+//-  base 
+link(rel="stylesheet" href=pathTo.css.base.all)
+link(rel="stylesheet" href=pathTo.css.base.vars)
+link(rel="stylesheet" href=pathTo.css.base.helpers)
+link(rel="stylesheet" href=pathTo.css.base.animation)
+
+//-  layout 
+link(rel="stylesheet" href=pathTo.css.layout.all)
+link(rel="stylesheet" href=pathTo.css.layout.logo)
+link(rel="stylesheet" href=pathTo.css.layout.lead)
+link(rel="stylesheet" href=pathTo.css.layout.header)
+
+//-  components 
+link(rel="stylesheet" href=pathTo.css.components.buttons)
+link(rel="stylesheet" href=pathTo.css.components.icons)
+link(rel="stylesheet" href=pathTo.css.components.modal)
+link(rel="stylesheet" href=pathTo.css.components.burger)
+
+//-  generic styles
+link(rel="stylesheet" href=pathTo.css.generic.style)
+link(rel="stylesheet" href=pathTo.css.generic.responsive)
+
+script(type="module" defer src=pathTo.js.vue)
+
+//- jquery
+script(type="module" defer src=pathTo.lib.jquery)
+//- LIBS SCRIPTS
+//- EmailJS
+script(type="module" defer src=pathTo.lib.emailJS)
+
+//- owlcarousel 
+script(type="module" defer src=pathTo.lib.owlCarousel.js)
+
+//- inputMask 
+script(type="module" defer src=pathTo.lib.inputMask)
+
+//- INTERNAL pathTo.js
+script(type="module" defer src=pathTo.js.inputConnect)
+script(type="module" defer src=pathTo.js.slider)
+script(type="module" defer src=pathTo.js.burger)
+script(type="module" defer src=pathTo.js.cardFlip)

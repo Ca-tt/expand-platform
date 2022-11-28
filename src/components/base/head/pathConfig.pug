@@ -1,0 +1,85 @@
+//- folders first
+- let cssFolder = './src/assets/css/';
+- let fontsFolder = './src/assets/fonts/';
+- let pluginsFolder = './src/assets/plugins/';
+- let jsFolder = './src/assets/js/';
+
+- 
+	let pathTo = {
+
+		//- css
+		css: {
+			//-  base 
+			base: {
+				all: cssFolder + 'base/base.css',
+				vars: cssFolder + 'base/variables.css',
+				helpers: cssFolder + 'base/helper.css',
+				animations: cssFolder + 'base/animations.css',
+			}, 
+
+			//- layout
+			layout: {
+				all: cssFolder + 'layout/layout.css',
+				logo: cssFolder + 'layout/logo.css',
+				lead: cssFolder + 'layout/lead.css',
+				header: cssFolder + 'layout/header.css',
+			},
+
+			//-  components
+			components: {
+				icons: cssFolder + 'components/icons.css',
+				buttons: cssFolder + 'components/buttons.css',
+				burger: cssFolder + 'components/burger.css',
+				modal: cssFolder + 'components/modal.css',
+			},
+
+			//- generic
+			generic: {
+				style: cssFolder + 'style.css',
+				responsive: cssFolder + 'responsive/responsive.css',
+			},
+		},
+
+		//- internal scripts
+		js: {
+			vue: './src/main.js',
+			inputConnect: jsFolder + 'inputConnect.js',
+			slider: jsFolder + 'slider.js',
+			burger: jsFolder + 'burger.js',
+			cardFlip: jsFolder + 'cardFlipTwitch.js',
+		},
+
+		//- external files
+		lib: {
+			jquery: pluginsFolder + 'owlcarousel/jquery.min.js',
+			emailJS: 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js',
+			inputMask: pluginsFolder + 'inputMask/inputmask.js',
+
+			//- font awesome
+			fontAwesome: {
+				css: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css',
+			},
+
+			//- Owl carousel
+			owlCarousel: {
+				//- css
+				base: pluginsFolder + 'owlcarousel/owl.carousel.css',
+				theme: pluginsFolder + 'owlcarousel/owl.theme.default.css',
+				custom: cssFolder + 'custom/owl-custom.css',
+				//- js
+				js: pluginsFolder + 'owlcarousel/owl.carousel.js',
+			}, 
+
+			//- google fonts
+			googleFonts: {
+				api: 'https://fonts.googleapis.com',
+				static: 'https://fonts.gstatic.com',
+				Inter: 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap',
+			},
+
+			//- local fonts
+			fonts: {
+				Bandera: fontsFolder + 'bandera.css',
+			},
+		},
+	}
