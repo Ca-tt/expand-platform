@@ -1,0 +1,85 @@
+main article {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+/* .main-article-icons {
+  margin-right: 10px;
+  min-width: 20px;
+  max-width: 20px;
+} */
+
+.icon-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 2em auto;
+  max-width: 75vw;
+}
+
+.icon-text .icon {
+  min-width: 15vw;
+  max-width: 25vw;
+  margin: 0 0 1em 0;
+}
+
+.icon-text .text {
+  color: var(--maroon);
+}
+
+.main-article-icons img {
+  /* width: 100%; */
+}
+
+.benefit-cards {
+  padding: 0 0 20vw 0;
+}
+
+/* benefits */
+.benefits-article-icons img {
+  width: 100%;
+}
+
+.benefits figure,
+.services figure {
+  margin: 10px 10px 10px 0;
+}
+
+/* flip-cards */
+.rotate-cards {
+  margin: 10px 10px 10px 0;
+  min-width: 20vw;
+  /* max-width: 50px; */
+  /* min-height: 2vh; */
+  position: relative;
+  perspective: 1000px;
+  /* margin: 0 0 50px 0; */
+}
+
+.video-rotate {
+  transform: rotateY(180deg);
+}
+
+.benefits-article-icons,
+.video-rotate {
+  position: absolute;
+  top: 0;
+  /* left: 0; */
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.card-icon {
+  /* max-width: 30vw; */
+}
+
+#twitch-card .benefits-article-icons {
+  animation: frontRotate 5s infinite;
+}
+
+#twitch-card .video-rotate {
+  animation: backRotate 5s infinite;
+}

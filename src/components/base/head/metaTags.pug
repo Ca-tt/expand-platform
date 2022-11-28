@@ -1,0 +1,38 @@
+//- META CONFIGS: change meta tags here, don't edit tags themselfs
+- 
+	let metaConfig = {
+		faviconURL: './src/img/logo.png',
+		title: 'EXPAND: школа веб-разработчиков',
+		description: 'Самые душевные уроки по веб-разработке: Vue.js, React, JavaScript и NodeJS. Авторский курс, индивидуальный подход и крайне лояльные цены — позволительно КАЖДОМУ',
+		keywords: 'курс, программирование, программист, школа, для детей, пробный урок, Киев, Украина, сайты, веб-разработка, для новичков, для начинающих',
+		siteUrl: 'https://expandplatform.com', 
+	}
+
+
+// base meta tags 
+meta(charset="UTF-8")
+meta(name="viewport" content="width=device-width, initial-scale=1.0")
+meta(http-equiv="X-UA-Compatible" content="IE=edge")
+link(rel="icon" href=metaConfig.faviconURL)
+title= metaConfig.title
+
+
+// base SEO meta tags
+meta(name="language" content="Russian")
+meta(name="title" content=metaConfig.title)
+meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+meta(name="description" content=metaConfig.description)
+meta(name="keywords" content="школа, программирования, для детей, пробный урок, Киев, Украина")
+meta(name="robots" content="index, follow")
+
+
+// advanced SEO meta tags 
+meta(property="og:locale" content="ru_RU")
+meta(property="og:type" content="website")
+link(rel="profile" href="http://gmpg.org/xfn/11")
+meta(property="og:title" content=metaConfig.title)
+meta(property="og:description" content=metaConfig.description)
+meta(property="og:url" content=metaConfig.siteUrl)
+link(rel="canonical" href=metaConfig.siteUrl)
+link(rel="shortlink" href=metaConfig.siteUrl)
+meta(property="og:site_name" content=metaConfig.title)

@@ -1,0 +1,7 @@
+:root {
+  --logo-base-size: 30vw;
+}
+
+.logo {
+  max-width: var(--logo-base-size);
+}

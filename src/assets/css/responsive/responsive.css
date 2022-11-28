@@ -1,0 +1,278 @@
+/* текст */
+html {
+    font-size: 17px;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 425px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    main .title {
+        font-size: 2.2rem;
+    }
+
+
+   
+    /* main */
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    main .title,
+    main h2 {
+        text-align: left;
+    }
+
+    .main-bg-container {
+        padding: 0 5% 0 0;
+        width: 40%;
+    }
+
+    main .container {
+        width: 40%;
+        padding: 0 0 0 5%;
+    }
+
+    /* benefits */
+    .benefits article {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .benefits figure {
+        width: 48%;
+    }
+
+
+    /* lessons-types */
+    .card-horizontal {
+        display: flex;
+        justify-content: center;
+    }
+
+    .lessons-types figure {
+        width: 50%;
+        margin: 20px 20px 20px 0;
+    }
+
+    .price {
+        flex-wrap: wrap;
+    }
+
+
+    .total-cost {
+        margin-bottom: 10px;
+    }
+
+    .circle-icon {
+        top: -1em;
+        left: -1em;
+    }
+
+    /* services */
+    .card-column {
+        margin-right: 20px;
+    }
+
+
+    /* reviews */
+    .profile-avatar {
+        width: 75px;
+        height: 75px;
+    }
+
+    .star {
+        width: 20px;
+    }
+
+
+    /* connect */
+    .flip-modal {
+        width: 450px;
+    }
+
+    .details {
+        padding: 7% 5%;
+    }
+
+    .phone-number {
+        height: 50px;
+        margin: 20px 0;
+    }
+
+    .connect-btn {
+        height: 40px;
+    }
+
+    .connect-menu {
+        margin-top: 25px;
+    }
+
+
+    /* modal */
+    .check {
+        width: 100px;
+    }
+
+
+    /* footer */
+    footer h2 {
+        margin-top: 2em;
+    }
+}
+
+
+/* desktop */
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: 18px;
+    }
+
+    /* main */
+    main {
+        align-items: flex-start;
+    }
+
+    .main-article-text p {
+        font-size: 20px;
+    }
+
+
+    /* benefits */
+    .benefits h4 {
+        font-size: 22px;
+    }
+
+    .benefits p {
+        font-size: 1.1rem;
+    }
+
+    .rotate-cards {
+        height: 75px;
+    }
+
+    .card-icon,
+    .rotate-cards {
+        min-width: 75px;
+        max-width: 75px;
+    }
+
+
+    /* lessons-type */
+    .total-cost {
+        margin-right: 30px;
+    }
+
+    .lessons-types figure {
+        width: 550px;
+        margin: 20px 40px 20px 0;
+    }
+
+
+    /* connect */
+    .flip-modal {
+        width: 550px;
+    }
+
+    .phone-number {
+        margin: 25px 0;
+    }
+
+    .connect-btn {
+        height: 45px;
+    }
+
+
+    /* modal */
+    .check {
+        width: 120px;
+    }
+}
+
+/* large-desktop */
+@media screen and (min-width: 1440px) {
+    html {
+        font-size: 20px;
+    }
+
+    .title {
+        font-size: 2.6rem;
+    }
+
+    main .title {
+        font-size: 2.6rem;
+    }
+
+
+
+
+    /* main */
+    .main-article-text p {
+        font-size: 1.2rem;
+    }
+
+    .main-article-icons {
+        min-width: 25px;
+        max-width: 25px;
+    }
+
+
+    /* reviews */
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .star {
+        width: 25px;
+        height: 25px;
+    }
+
+
+    /* connect */
+    .flip-modal {
+        width: 650px;
+    }
+
+    .connect-btn {
+        height: 50px;
+    }
+
+
+    /* modal */
+    .check {
+        width: 150px;
+    }
+}

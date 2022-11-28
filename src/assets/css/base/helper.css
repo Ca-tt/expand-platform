@@ -1,0 +1,73 @@
+.round-5 {
+    border-radius: 5px;
+}
+
+.round {
+    border-radius: 10px;
+}
+
+/* cursor */
+.pointer {
+    cursor: pointer;
+}
+
+/* position */
+.rel {
+    position: relative;
+}
+
+/* базовый флекс */
+.flex {
+    display: flex;
+}
+
+.none,
+.d-none {
+    display: none;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+/* для тайтлов */
+.title {
+    font-weight: 700;
+    font-family: var(--ff-bandera);
+    color: var(--maroon);
+    letter-spacing: 0.05em;
+}
+
+.subtitle {
+    font-weight: 500;
+    font-family: var(--ff-bandera);
+    color: var(--burgundy);
+}
+
+h1, h2 {
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+h3, h4, h5, h6 {
+    font-weight: 300;
+    margin: 5px 0;
+}

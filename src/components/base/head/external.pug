@@ -1,0 +1,70 @@
+//- CONFIGS: change paths here
+- let cssPath = './src/assets/css/';
+- let fontsPath = './src/assets/fonts/';
+- let pluginsPath = './src/assets/plugins/';
+
+//- external links
+-
+	let links = {
+
+		//  font awesome 
+		fontAwesome: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css',
+
+		//- google fonts
+		googleFonts: {
+			api: 'https://fonts.googleapis.com',
+			static: 'https://fonts.gstatic.com',
+			Inter: 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap',
+		},
+
+		//- fonts
+		fonts: {
+			Bandera: fontsPath + 'bandera.css',
+		},
+
+		//-  owl carousel 
+		owlCarousel: {
+			base: pluginsPath + 'owlcarousel/owl.carousel.css',
+			theme: pluginsPath + 'owlcarousel/owl.theme.default.css',
+			custom: cssPath + 'custom/owl-custom.css',
+		},
+	}
+
+//- external scripts
+- 
+	let scripts = {
+		jquery: pluginsPath + 'owlcarousel/jquery.min.js',
+		owlCarousel: pluginsPath + 'owlcarousel/owl.carousel.js',
+		inputMask: pluginsPath + 'inputMask/inputmask.js',
+		emailJS: 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js',
+	};
+
+
+//- LINKS
+//- fonts
+link(rel="stylesheet" href=links.fonts.Bandera)
+
+//- font awesome
+link(rel="stylesheet" href=links.fontAwesome integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer")
+
+//- google fonts 
+link(rel="preconnect" href=links.googleFonts.api)
+link(rel="preconnect" href=links.googleFonts.static, crossorigin)
+link(href=links.googleFonts.Inter rel="stylesheet")
+
+//- //-  owl carousel 
+link(rel="stylesheet" href=links.owlCarousel.base)
+link(rel="stylesheet" href=links.owlCarousel.theme)
+link(rel="stylesheet" href=links.owlCarousel.custom)
+
+
+//- SCRIPTS
+//- EmailJS
+script(type="module" src=scripts.emailJS)
+
+//- owlcarousel 
+script(type="module" src=scripts.jquery)
+script(type="module" src=scripts.owlCarousel)
+
+//- inputMask 
+script(type="module" src=scripts.inputMask)

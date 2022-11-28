@@ -1,0 +1,14 @@
+User-agent: *
+Disallow:
+Sitemap: https://dnepr-masterok.com.ua/sitemap.xml
+
+#        _
+#       [ ]
+#      (   )
+#       |>|
+#    __/===\__
+#   //| o=o |\\
+# <]  | o=o |  [>
+#     \=====/
+#    / / | \ \
+#   <_________>

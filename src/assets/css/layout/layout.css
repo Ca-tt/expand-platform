@@ -1,0 +1,9 @@
+.container {
+  padding: 5%;
+}
+
+.container-90 {
+  max-width: 90vw;
+  padding: 1em;
+  margin: 0 auto;
+}

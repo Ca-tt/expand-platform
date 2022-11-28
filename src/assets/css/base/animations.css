@@ -1,0 +1,124 @@
+:root {
+  --base-animation-duration: .7s;
+}
+
+/* small helper */
+.hidden {
+  display: none;
+}
+
+/* @keyframes show {
+  0% {
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  100% {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+} */
+
+/* .hide {
+  animation: hide var(--base-animation-duration) ease-in-out forwards;
+}
+
+.show {
+  animation: show var(--base-animation-duration) ease-in-out forwards;
+} */
+
+.hide {
+  opacity: -1;
+  z-index: -2 !important;
+}
+
+/* подёргивающаяся иконка */
+@keyframes twitch {
+  0% {
+    transform: translateY(0);
+  }
+
+  5% {
+    transform: translateY(-5px);
+  }
+
+  17% {
+    transform: translateY(0);
+  }
+
+  32% {
+    transform: translateX(0);
+  }
+
+  34% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  67% {
+    transform: translateY(0);
+  }
+
+  70% {
+    transform: translateY(-5px);
+  }
+
+  84% {
+    transform: translateY(0);
+  }
+
+  88% {
+    transform: translateX(0);
+  }
+
+  90% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes frontRotate {
+  0% {
+    transform: rotateY(0);
+  }
+
+  15% {
+    transform: rotateY(180deg);
+  }
+
+  30% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes backRotate {
+  0% {
+    transform: rotateY(180deg);
+  }
+
+  15% {
+    transform: rotateY(0deg);
+  }
+
+  30% {
+    transform: rotateY(180deg);
+  }
+}
