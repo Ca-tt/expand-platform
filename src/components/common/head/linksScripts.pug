@@ -1,0 +1,46 @@
+include ./pathConfig.pug
+include ./mixins.pug
+
+- 
+	let links = {
+		//- external
+		fontAwesome: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css',
+		Inter: 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap',
+		owlCarouselBase: folder.plugins + 'owlcarousel/owl.carousel.css',
+		owlCarouselTheme: folder.plugins + 'owlcarousel/owl.theme.default.css',
+		Bandera: folder.fonts + 'bandera.css',
+
+		//- local
+		style: folder.css + 'style.scss',
+	}
+
+- 
+	let preconnectLinks = {
+		googleFontsApi: 'https://fonts.googleapis.com',
+		googleFontsStatic: 'https://fonts.gstatic.com',
+	}
+
+- 
+	let scripts = {
+		//- external
+		jquery: folder.plugins + 'owlcarousel/jquery.min.js',
+		owlCarousel: folder.plugins + 'owlcarousel/owl.carousel.js',
+		emailJS: 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js',
+		inputMask: folder.plugins + 'inputMask/inputmask.js',
+
+		//- local
+		vue: './src/main.js',
+		inputConnect: folder.js + 'inputConnect.js',
+		slider: folder.js + 'slider.js',
+		burger: folder.js + 'burger.js',
+		cardFlip: folder.js + 'cardFlipTwitch.js',
+	}
+
+each href in preconnectLinks
+	+preconnectLink(href)
+
+each href in links
+	+link(href)
+
+each src in scripts
+	+script(src)

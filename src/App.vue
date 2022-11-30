@@ -1,80 +1,52 @@
 <script setup>
-// let jsPath = './assets/js/';
-
-// import './assets/js/cardFlipTwitch.js';
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-// import HelloWorld from "./components/HelloWorld.vue";
+import Header from "./components/common/Header.vue";
+import Footer from "./components/common/Footer.vue";
 </script>
 
 <template lang="pug">
-- let imgPath = './assets/img/';
-- let videoPath = './assets/video/';
+- 
+  let folder = {
+    img: './assets/img/',
+    video: './assets/video/',
+  } 
 
-  //- header 
-  header.container-90.flex-center
-    figure.burger-icon
-      #line1.line
-      #line2.line
-      #line3.line
-      #line4.line
-    .logo
-      img.logo-img(src=imgPath + "logo.png")
-    nav.burger-menu.round
-      p.burger-menu-item
-        a.navigations.anchor(href="#benefits") Чем мы отличаемся от других курсов/школ?
-      p.burger-menu-item
-        a.navigations.anchor(href="#services") Какой уровень навыков даём?
-      p.burger-menu-item
-        a.red-button.header-btn.flex-center.anchor(href="#connect") Спросить напрямую
+//- site header
+Header
 
-    //-  disabled for uncertain time 
-    //-  previously it was in header, though
-
-    //- .lang-switch.flex
-    //-   span.lang RU
-    //-   span.open-arrow
-    //-     #crossLine1.crossLine
-    //-     #crossLine2.crossLine
-    //- .none.lang-options
-    //-   .lang-option.pointer
-    //-     a(href="./index.html") Русский
-    //-   .lang-option.pointer
-    //-     a(href="./index-ua.html") Українська
-    //-   .lang-option.pointer
-    //-     a(href="./index-en.html") English
 //-  main 
 main
   section.lead-section.main-bg-container
-    img.main-bg-image.round-5(src=imgPath + "people/lead-smiling.jpg", alt)
+    img.main-bg-image.round-5(src=folder.img + "people/lead-smiling.jpg", alt)
     p.lead-image-caption.text-center Photo by Anastasia Zastavskaya
   .container
     h1.title(data-en="Programming school EXPAND") Школа веб-разработки EXPAND
     //-  <h2 data-en="The best lessons in the world">Самые душевные уроки по программированию</h2> 
     article.lead-icons.icon-text
       .main-article-icons
-        img.icon(src=imgPath + "icons/ind-ico.svg", alt)
+        img.icon(src=folder.img + "icons/ind-ico.svg", alt)
       .main-article-text
         p
           | Занятия 1-на-1 
           b.text по запросу
     article.lead-icons.icon-text
       .main-article-icons
-        img.icon(src=imgPath + "icons/inc.svg", alt)
+        img.icon(src=folder.img + "icons/inc.svg", alt)
       .main-article-text
         p
           b.text Скидки 100-300 грн
           |  за лучший результат в группе
     article.lead-icons.icon-text
       .main-article-icons
-        img.icon(src=imgPath + "icons/disc.svg", alt)
+        img.icon(src=folder.img + "icons/disc.svg", alt)
       .main-article-text
         p
           b.text Проекты за деньги 
           | прямо посреди обучения
     article.lead-icons.icon-text
       .main-article-icons
-        img.icon(src=imgPath + "icons/fam.svg", alt)
+        img.icon(src=folder.img + "icons/fam.svg", alt)
       .main-article-text
         p
           b.text Не просто курс — 
@@ -90,52 +62,52 @@ section.benefits.container
         p Мы готовим новые темы, чтобы вы никогда не заскучали с нами
       #twitch-card.rotate-cards.pointer
         .benefits-article-icons.card-icon
-          img(src=imgPath + "benefits/les-ico.png", alt)
+          img(src=folder.img + "benefits/les-ico.png", alt)
         .video-rotate.card-icon
-          img(src=imgPath + "benefits/play1-ico.png", alt)
+          img(src=folder.img + "benefits/play1-ico.png", alt)
       //-  video modal 
       section.overlay.hide.flex-center
         .modal.flex-center.video-container
-          video(src=videoPath + "2022-09-02 16-58-07.mp4", controls)
+          video(src=folder.video + "2022-09-02 16-58-07.mp4", controls)
     figure.flex-center.column.benefit-cards.text-center
       div
         h3.subtitle Ротации
         p Успеваешь лучше других? Тогда перейдёшь в более сильную группу
       .rotate-cards.pointer
         .benefits-article-icons.card-icon
-          img(src=imgPath + "benefits/rot-ico.png", alt)
+          img(src=folder.img + "benefits/rot-ico.png", alt)
         .video-rotate.card-icon
-          img(src=imgPath + "benefits/play1-ico.png", alt)
+          img(src=folder.img + "benefits/play1-ico.png", alt)
       //-  video modal 
       section.overlay.hide.flex-center
         .modal.flex-center.video-container
-          video(src=videoPath + "2022-09-02 16-58-07.mp4", controls) >
+          video(src=folder.video + "2022-09-02 16-58-07.mp4", controls) >
     figure.flex-center.column.benefit-cards.text-center
       div
         h3.subtitle Реальные проекты
         p Пройди вступной экзамен и делай сайты с другими студентами. За деньги
       .rotate-cards.pointer
         .benefits-article-icons.card-icon
-          img(src=imgPath + "benefits/pro-ico.png", alt)
+          img(src=folder.img + "benefits/pro-ico.png", alt)
         .video-rotate.card-icon
-          img(src=imgPath + "benefits/play1-ico.png", alt)
+          img(src=folder.img + "benefits/play1-ico.png", alt)
       //-  video modal 
       section.overlay.hide.flex-center
         .modal.flex-center.video-container
-          video(src=videoPath + "2022-09-02 16-58-07.mp4", controls) >
+          video(src=folder.video + "2022-09-02 16-58-07.mp4", controls) >
     figure.flex-center.column.benefit-cards.text-center
       div
         h3.subtitle Стань автором уроков / учителем
         p Начни получать денежки вместе с нами: пиши уроки, учи студентов, стань для других ментором
       .rotate-cards.pointer
         .benefits-article-icons.card-icon
-          img(src=imgPath + "benefits/aut-ico.png", alt)
+          img(src=folder.img + "benefits/aut-ico.png", alt)
         .video-rotate.card-icon
-          img(src=imgPath + "benefits/play1-ico.png", alt)
+          img(src=folder.img + "benefits/play1-ico.png", alt)
       //-  video modal 
       section.hide.overlay.flex-center
         .modal.flex-center.video-container
-          video(src=videoPath + "kawunchik.mp4", controls) >
+          video(src=folder.video + "kawunchik.mp4", controls) >
 //-  lessons-types 
 section.lessons-types.container
   h2.title.text-center 2 формата в одной школе
@@ -143,9 +115,9 @@ section.lessons-types.container
     figure
       .lesson-card
         .img-zoom
-          img(src=imgPath + "lessons-types/group-photo.png", alt)
+          img(src=folder.img + "lessons-types/group-photo.png", alt)
         .circle-icon
-          img(src=imgPath + "lessons-types/circle 2.png", alt)
+          img(src=folder.img + "lessons-types/circle 2.png", alt)
       article
         h3.subtitle Работа в команде
         ol
@@ -173,9 +145,9 @@ section.lessons-types.container
     figure
       .lesson-card
         .img-zoom
-          img(src=imgPath + "lessons-types/solo-photo.png", alt)
+          img(src=folder.img + "lessons-types/solo-photo.png", alt)
         .circle-icon
-          img(src=imgPath + "lessons-types/circle 2.png", alt)
+          img(src=folder.img + "lessons-types/circle 2.png", alt)
       article
         h3.subtitle Прокачка навыков с ментором
         ol
@@ -208,7 +180,7 @@ section.services.container
       .card-column.flex.column.between
         figure.flex
           .card-icon
-            img(src=imgPath + "services/html-ico.png", alt)
+            img(src=folder.img + "services/html-ico.png", alt)
           article
             h3.subtitle 1. Вёрстка сайтов HTML/CSS/JS
             p
@@ -216,7 +188,7 @@ section.services.container
               span.descr “запчасти” сайтов
         figure.flex
           .card-icon
-            img(src=imgPath + "services/js-co.png", alt)
+            img(src=folder.img + "services/js-co.png", alt)
           article
             h3.subtitle 2. Чистый JavaScript
             p
@@ -225,7 +197,7 @@ section.services.container
       .card-column.flex.column.between
         figure.flex
           .card-icon
-            img(src=imgPath + "services/frl-ico.png", alt)
+            img(src=folder.img + "services/frl-ico.png", alt)
           article
             h3.subtitle 3. Фриланс и работа в команде
             p
@@ -236,7 +208,7 @@ section.services.container
               
         figure.flex
           .card-icon
-            img(src=imgPath + "services/nod-ico.png", alt)
+            img(src=folder.img + "services/nod-ico.png", alt)
           article
             h3.subtitle 4. Node.js
             p
@@ -252,13 +224,13 @@ section.services.container
       .card-column.flex.column.between
         figure.flex
           .card-icon
-            img(src=imgPath + "services/react.png", alt)
+            img(src=folder.img + "services/react.png", alt)
           article
             h3.subtitle React.js
             p ПРасскажите, что отличает ваши услуги от услуг в других компаниях
         figure.flex
           .card-icon
-            img(src=imgPath + "services/vue.png", alt)
+            img(src=folder.img + "services/vue.png", alt)
           article
             h3.subtitle Vue.js
             p.
@@ -270,7 +242,7 @@ section.services.container
       .card-column.flex.column.between
         figure.flex
           .card-icon
-            img(src=imgPath + "services/managment.png", alt)
+            img(src=folder.img + "services/managment.png", alt)
           article
             h3.subtitle Менеджмент
             p.
@@ -287,42 +259,42 @@ section.reviews.container
       figure.comment
         .student.flex.row
           .profile-avatar
-            img(src=imgPath + "reviews/images.jpg", alt)
+            img(src=folder.img + "reviews/images.jpg", alt)
           .student-info
             h3.subtitle Вупсень
             p.descr Ученик третьего курса
             .stars
               .star
-                img(src=imgPath + "reviews/Vector.png", alt)
+                img(src=folder.img + "reviews/Vector.png", alt)
               .star
-                img(src=imgPath + "reviews/Vector.png", alt)
+                img(src=folder.img + "reviews/Vector.png", alt)
               .star
-                img(src=imgPath + "reviews/Vector.png", alt)
+                img(src=folder.img + "reviews/Vector.png", alt)
               .star
-                img(src=imgPath + "reviews/Vector.png", alt)
+                img(src=folder.img + "reviews/Vector.png", alt)
               .star
-                img(src=imgPath + "reviews/Vector.png", alt)
+                img(src=folder.img + "reviews/Vector.png", alt)
         p.
           Школа классная, но я сегодня ударился мизинцем об ножку стола, по-этому ставлю 3 звезды Я люблю смотреть мультфильмы - мы это делаем всей семьей, выбирая подходящее для всех время. Садимся поудобнее, берем различные вкусняшки, в летний период это компот и мороженое, заранее выбирает мультфильм и начинаем просмотр, а после делимся впечатлениями.
           
       figure.comment
         .student.flex
           .profile-avatar
-            img(src=imgPath + "reviews/images2.jpg", alt)
+            img(src=folder.img + "reviews/images2.jpg", alt)
           .student-info
             h3.subtitle Пупсень
             p.descr Ученик третьего курса
             .stars
               .star
-                img(src=imgPath + "reviews/star-empty.png", alt)
+                img(src=folder.img + "reviews/star-empty.png", alt)
               .star
-                img(src=imgPath + "reviews/star-empty.png", alt)
+                img(src=folder.img + "reviews/star-empty.png", alt)
               .star
-                img(src=imgPath + "reviews/Vector.png", alt)
+                img(src=folder.img + "reviews/Vector.png", alt)
               .star
-                img(src=imgPath + "reviews/Vector.png", alt)
+                img(src=folder.img + "reviews/Vector.png", alt)
               .star
-                img(src=imgPath + "reviews/Vector.png", alt)
+                img(src=folder.img + "reviews/Vector.png", alt)
         p.
           Школа классная, но я сегодня ударился мизинцем об ножку стола, по-этому ставлю 3 звезды Я люблю смотреть мультфильмы - мы это делаем всей семьей, выбирая подходящее для всех время. Садимся поудобнее, берем различные вкусняшки, в летний период это компот и мороженое, заранее выбирает мультфильм и начинаем просмотр, а после делимся впечатлениями.
           
@@ -341,45 +313,23 @@ a#connect(name="connect")
             .flex.between.connect-menu
               .flex.column.connect-column
                 button#messenger.connect-btn.red-button.flex-center.pointer
-                  img(src=imgPath + "connect/Vector.png", alt)
+                  img(src=folder.img + "connect/Vector.png", alt)
                 p Свяжитесь со мной в Telegram / Viber
               .flex.column.connect-column
                 button#phone.connect-btn.red-button.flex-center.pointer
-                  img(src=imgPath + "connect/call.png", alt)
+                  img(src=folder.img + "connect/call.png", alt)
                 p Перезвоните мне на мобильный
           .circle-icon
-            img(src=imgPath + "lessons-types/circle 2.png", alt)
+            img(src=folder.img + "lessons-types/circle 2.png", alt)
       #modalFlip.details-container
         .modal-window.container
           h2.title Спасибо
           p Ваша заявка принята в обработку. Мы свяжемся с вами в ближайшее время
           .check
-            img(src=imgPath + "modal/Vector.png", alt)
+            img(src=folder.img + "modal/Vector.png", alt)
           .circle-icon
-            img(src=imgPath + "lessons-types/circle 2.png", alt)
-//-  footer 
-footer.container.flex.column.text-center
-  h2
-    | Каждый может стать каждым в
-    br
-    span.title EXPAND
-  address.social-networks.flex-center
-    a.social(href="https://t.me/expand_code")
-      .flex-center
-        img(src=imgPath + "social-networks/tg.png", alt)
-    a.social(href="#")
-      .flex-center
-        img(src=imgPath + "social-networks/fc.png", alt)
-    a.social(href="#")
-      .flex-center
-        img(src=imgPath + "social-networks/ut.png", alt)
-    a.social(href="#")
-      .flex-center
-        img(src=imgPath + "social-networks/tt.png", alt)
-    a.social(href="#")
-      .flex-center
-        img(src=imgPath + "social-networks/inst.png", alt)
-  p.copyright ©EXPAND 2022
+            img(src=folder.img + "lessons-types/circle 2.png", alt)
+Footer
 </template>
 
 <style lang="scss" scoped>
