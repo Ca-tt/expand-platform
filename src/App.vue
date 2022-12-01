@@ -12,49 +12,79 @@ import Footer from "./components/common/Footer.vue";
     video: './assets/video/',
   } 
 
+- 
+  let text = {
+    leadImageCaption: 'Photo by Anastasia Zastavskaya', 
+    siteTitle: 'Школа веб-разработки EXPAND', 
+    benefitsIcons: {
+      firstIcon: {
+        bold: 'Фокус на качестве, ',
+        regular: 'не на скорости',
+      },
+      secondIcon: {
+        bold: 'Дешевле ',
+        regular: 'разрекламированных курсов',
+      },
+      thirdIcon: {
+        bold: 'Проекты за деньги ',
+        regular: 'прямо посреди обучения',
+      },
+      fourthIcon: {
+        bold: 'Поддержка, ',
+        regular: 'а не просто материалы',
+      },
+    },
+    features: {
+      title: 'Прямо как работа в IT-компании',
+    } 
+  }
+
+
+
 //- site header
 Header
 
 //-  main 
 main
+  //- lead image
   section.lead-section.main-bg-container
-    img.main-bg-image.round-5(src=folder.img + "people/lead-smiling.jpg", alt)
-    p.lead-image-caption.text-center Photo by Anastasia Zastavskaya
+    img.main-bg-image.round-5(src=folder.img + "people/lead-smiling-cropped.jpg" alt="two guys smiling at their desk")
+    p.lead-image-caption.text-center= text.leadImageCaption
+
   .container
-    h1.title(data-en="Programming school EXPAND") Школа веб-разработки EXPAND
-    //-  <h2 data-en="The best lessons in the world">Самые душевные уроки по программированию</h2> 
-    article.lead-icons.icon-text
-      .main-article-icons
+    h1.site-title= text.siteTitle
+    //- icons
+    article.icon-caption
+      .icon-wrapper
         img.icon(src=folder.img + "icons/ind-ico.svg", alt)
-      .main-article-text
-        p
-          | Занятия 1-на-1 
-          b.text по запросу
-    article.lead-icons.icon-text
-      .main-article-icons
+      p.caption
+        b= text.benefitsIcons.firstIcon.bold
+        span= text.benefitsIcons.firstIcon.regular
+    article.icon-caption
+      .icon-wrapper
         img.icon(src=folder.img + "icons/inc.svg", alt)
-      .main-article-text
-        p
-          b.text Скидки 100-300 грн
-          |  за лучший результат в группе
-    article.lead-icons.icon-text
-      .main-article-icons
+      p.caption
+        b= text.benefitsIcons.secondIcon.bold
+        span= text.benefitsIcons.secondIcon.regular
+    article.icon-caption
+      .icon-wrapper
         img.icon(src=folder.img + "icons/disc.svg", alt)
-      .main-article-text
-        p
-          b.text Проекты за деньги 
-          | прямо посреди обучения
-    article.lead-icons.icon-text
-      .main-article-icons
+      p.caption
+        b= text.benefitsIcons.thirdIcon.bold
+        span= text.benefitsIcons.thirdIcon.regular 
+    article.icon-caption
+      .icon-wrapper
         img.icon(src=folder.img + "icons/fam.svg", alt)
-      .main-article-text
-        p
-          b.text Не просто курс — 
-          | одна семья
+      p.caption
+        b= text.benefitsIcons.fourthIcon.bold
+        span= text.benefitsIcons.fourthIcon.regular 
+    //- end icons
+    
 section.benefits.container
   //-  benefits scroll link 
   a#benefits(name="benefits")
-  h2.title.text-center#title Прямо как работа в IT-компании
+
+  h2#title.title= text.features.title
   article
     figure.flex-center.column.benefit-cards.text-center
       .text-center

@@ -1,0 +1,23 @@
+$mobile-margin: 0 0 1em 0;
+$mobile-extra-space: 0 0 2em 0;
+
+$container-space: 0 1em;
+
+div, 
+p, 
+h1,
+h2,
+article,
+.title,
+.subtitle {
+  margin: $mobile-margin;
+}
+
+section,
+.icon-caption {
+  margin: $mobile-extra-space;
+}
+
+.container {
+  padding: $container-space;
+}

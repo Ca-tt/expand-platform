@@ -1,38 +1,24 @@
-main article {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
+// default icon with caption
+.icon-caption {
+
+  .icon {
+    width: 20%;
+  }
+
+  .caption {
+    color: $black-red;
+  }
+
+  // modifiers
+  .has-title {
+    
+    .title {
+
+    }
+  }
 }
 
-/* .main-article-icons {
-  margin-right: 10px;
-  min-width: 20px;
-  max-width: 20px;
-} */
-
-.icon-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 2em auto;
-  max-width: 75vw;
-}
-
-.icon-text .icon {
-  min-width: 15vw;
-  max-width: 25vw;
-  margin: 0 0 1em 0;
-}
-
-.icon-text .text {
-  color: var(--maroon);
-}
-
-.main-article-icons img {
-  /* width: 100%; */
-}
+// icon with title and caption
 
 .benefit-cards {
   padding: 0 0 20vw 0;

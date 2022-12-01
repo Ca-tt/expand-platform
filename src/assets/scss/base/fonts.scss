@@ -1,12 +1,81 @@
-// sizes
-// $title: ;
-// $subtitle: ;
+// base sizes
+$mobile-font-size: 18px;
+$mobile-text-alignment: center;
+$default-font-size: 1rem;
+
+// two most frequent font sizes
+// $-font-size: $base-mobile-font-size;
+// $secondary-font-size: $base-mobile-font-size;
+
+// titles
+$site-title-font-size: $default-font-size * 2.75;
+$title-font-size: $default-font-size * 2.25;
+$subtitle-font-size: $default-font-size * 2;
+
+// leads
+$lead-title-font-size: $default-font-size;
+$lead-subtitle-font-size: $default-font-size *1.25;
+
+// other subtitles
+$icon-caption-font-size: 1.5rem;
+$img-caption-font-size: 0.7rem;
+
+// font-weight
+$bold-weight: 500;
+$title-weight: 700;
+
+html, 
+body {
+  font-size: $mobile-font-size;
+  text-align: $mobile-text-alignment;
+}
 
 
+h1, 
+.site-title {
+  font-size: $site-title-font-size;
+}
+
+h2, 
 .title {
-
+  font-size: $title-font-size;
+  font-weight: $title-weight;
 }
 
+h3, 
 .subtitle {
-
+  font-size: $subtitle-font-size;
 }
+
+h4, .img-caption {
+  font-size: $img-caption-font-size;
+}
+
+
+// leads
+.lead-font-size {
+  font-size: $lead-title-font-size;
+}
+
+.lead-subtitle-font-size {
+  font-size: $lead-subtitle-font-size;
+}
+
+p {
+  font-size: $default-font-size;
+}
+
+b {
+  font-weight: $bold-weight;
+}
+
+
+
+// regular text
+.icon-caption {
+
+  .caption {
+    font-size: $icon-caption-font-size;
+  }
+}
+

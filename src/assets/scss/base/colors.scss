@@ -1,0 +1,26 @@
+$white: #fff;
+$gray: #36413E;
+$black: rgb(13, 12, 12);
+
+$default-color: $gray;
+
+// reds
+$red: #E62428;
+$dark-red: #511717;
+$black-red: #2E0C0C;
+
+/* block styling */
+$basic-box-shadow: 0 0 5px 5px rgba(0, 0, 0, .5);
+$overlay-bg: rgba(0, 0, 0, .2);
+
+body {
+  color: $gray;
+}
+
+.title {
+  color: $black; 
+}
+
+.subtitle {
+  color: $black;
+}
