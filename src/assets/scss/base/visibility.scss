@@ -7,6 +7,7 @@
   }
 }
 
+
 /* show from landscape, show from tablet etc... */
 @each $name, $resolution in $resolutions {
   .show-from-#{$name} {
