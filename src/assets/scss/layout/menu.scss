@@ -1,0 +1,17 @@
+.menu {
+
+  &-item {
+    margin: .5em;
+  }
+  
+  &-link {}
+
+  &.mobile {
+    
+  }
+  &.desktop {
+    @include show-from($tablet) {
+      display: flex;
+    }
+  }
+}

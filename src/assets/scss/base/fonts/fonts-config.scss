@@ -1,0 +1,25 @@
+// base sizes
+$mobile-font-size: 18px;
+$mobile-text-alignment: center;
+$default-font-size: 1rem;
+
+// two most frequent font sizes
+// $-font-size: $base-mobile-font-size;
+// $secondary-font-size: $base-mobile-font-size;
+
+// titles
+$site-title-font-size: $default-font-size * 2.75;
+$title-font-size: $default-font-size * 2.25;
+$subtitle-font-size: $default-font-size * 2;
+
+// leads
+$lead-title-font-size: $default-font-size;
+$lead-subtitle-font-size: $default-font-size *1.25;
+
+// other subtitles
+$icon-caption-font-size: 1.5rem;
+$img-caption-font-size: 0.7rem;
+
+// font-weight
+$bold-weight: 500;
+$title-weight: 700;

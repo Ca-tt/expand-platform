@@ -1,0 +1,17 @@
+// container, container-80, container-90
+
+/*classname, max-width */
+$containers: 
+  (container, 90%),
+  (container-90, 90%);
+
+@each $class, $max-width in $containers {
+  .#{$class} {
+    padding: .5em;
+    margin: 0 auto;
+
+    @include from($tablet) {
+      max-width: $max-width;
+    }
+  }
+}

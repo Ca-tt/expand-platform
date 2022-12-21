@@ -1,0 +1,18 @@
+body {
+  text-align: center;
+}
+
+.site-header {
+
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+// @mixin make-site-header() {
+//   @include from($landscape) {
+//     @extend .flex-between;
+//   }
+// }

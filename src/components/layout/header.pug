@@ -1,0 +1,55 @@
+- 
+	let folder = {
+		img: '/src/assets/img/',
+	} 
+
+
+//- site header 
+header.site-header
+	.container
+		.row-between-y-center-tablet
+
+			//- on DESKTOP
+			//- site logo
+			.logo
+				a.logo-link(href="./")
+					img.logo-img(src=folder.img + "logo.png")
+			
+			//- navigation
+			nav.menu.hidden.show-from-landscape
+				.menu-item
+					a.menu-link(href="#benefits") Что мы даём
+				.menu-item
+					a.menu-link(href="#services") Наш курс
+				.menu-item
+					a.menu-link.button(href="#connect") Связаться
+
+			//- on MOBILE
+			figure.burger-icon
+				#line1.line
+				#line2.line
+				#line3.line
+				#line4.line
+			nav.burger-menu.mobile.round
+				p.burger-menu-item
+					a.navigations.anchor(href="#benefits") Чем мы отличаемся от других курсов/школ?
+				p.burger-menu-item
+					a.navigations.anchor(href="#services") Какой уровень навыков даём?
+				p.burger-menu-item
+					a.red-button.header-btn.flex-center.anchor(href="#connect") Спросить напрямую
+
+	//-  disabled for uncertain time 
+	//-  previously it was in header, though
+
+	//- .lang-switch.flex
+	//-   span.lang RU
+	//-   span.open-arrow
+	//-     #crossLine1.crossLine
+	//-     #crossLine2.crossLine
+	//- .none.lang-options
+	//-   .lang-option.pointer
+	//-     a(href="./index.html") Русский
+	//-   .lang-option.pointer
+	//-     a(href="./index-ua.html") Українська
+	//-   .lang-option.pointer
+	//-     a(href="./index-en.html") English

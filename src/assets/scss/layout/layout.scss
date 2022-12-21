@@ -1,9 +1,5 @@
+@import './container.scss';
 @import './logo.scss';
 @import './lead.scss';
 @import './header.scss';
-
-.container-90 {
-  max-width: 90vw;
-  padding: 1em;
-  margin: 0 auto;
-}
+@import './menu.scss';

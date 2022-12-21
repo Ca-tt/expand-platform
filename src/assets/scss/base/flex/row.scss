@@ -1,0 +1,94 @@
+/* base to extend */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row {
+  @extend .flex;
+}
+
+.columns {
+  @extend .flex;
+  flex-direction: column;
+}
+/* end base */
+
+/* row types */
+$rows: (
+  nowrap: (
+    (flex-wrap, nowrap),
+  ),
+  center: (
+    (place-items, center),
+  ),
+  x-center: (
+    (justify-content, center),
+  ),
+  y-center: (
+    (align-items, center),
+  ),
+  between: (
+    (justify-content, space-between), 
+  ),
+  between-y-center: (
+    (justify-content, space-between),
+    (align-items, center),
+  ),
+);
+
+
+@each $classname, $classes in $rows {
+  
+  // no media 
+  .row-#{$classname} {
+    @extend .flex;
+    @each $rule, $value in $classes {
+      #{$rule}: $value;
+    }
+  }
+  
+  // from (min-width)
+  @each $resolution, $size in $resolutions {
+    
+    .row-#{$resolution} {
+      @include from($size) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+   
+    .columns-#{$resolution} {
+      @include from($size) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+    }
+
+    .row-#{$classname}-#{$resolution} {
+      @extend .flex;
+      @include from($size) {
+        @each $rule, $value in $classes {
+          #{$rule}: $value;
+        }
+      }
+    }
+  }
+  
+  // to (max-width) 
+  @each $resolution, $size in $resolutions {
+    .row-#{$classname}-to-#{$resolution} {
+      @extend .flex;
+      @include to($size) {
+        @each $rule, $value in $classes {
+          #{$rule}: $value;
+        }
+      }
+    }
+  }
+}
+
+
+
+

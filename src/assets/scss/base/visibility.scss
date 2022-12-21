@@ -1,0 +1,15 @@
+@mixin show-from($resolution) {
+  display: none;
+
+  @include from($resolution) {
+    display: block;
+    @content;
+  }
+}
+
+/* show from landscape, show from tablet etc... */
+@each $name, $resolution in $resolutions {
+  .show-from-#{$name} {
+    @include show-from($resolution);
+  }
+}

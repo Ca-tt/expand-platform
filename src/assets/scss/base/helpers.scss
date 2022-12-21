@@ -16,36 +16,11 @@
     position: relative;
 }
 
-/* базовый флекс */
-.flex {
-    display: flex;
-}
-
+/* display */
 .none,
+.hidden,
 .d-none {
     display: none;
-}
-
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.align-center {
-    align-items: center;
-}
-
-.between {
-    justify-content: space-between;
-}
-
-.column {
-    flex-direction: column;
-}
-
-.row {
-    flex-direction: row;
 }
 
 /* для тайтлов */

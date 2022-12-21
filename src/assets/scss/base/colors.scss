@@ -1,8 +1,8 @@
+// base colors
 $white: #fff;
 $gray: #36413E;
 $black: rgb(13, 12, 12);
 
-$default-color: $gray;
 
 // reds
 $red: #E62428;
@@ -13,8 +13,14 @@ $black-red: #2E0C0C;
 $basic-box-shadow: 0 0 5px 5px rgba(0, 0, 0, .5);
 $overlay-bg: rgba(0, 0, 0, .2);
 
+/* element colors */;
+$body-default-color: $gray;
+$link-color: $dark-red;
+$button-color: $white;
+$button-background: $red;
+
 body {
-  color: $gray;
+  color: $body-default-color;
 }
 
 .title {
@@ -23,4 +29,15 @@ body {
 
 .subtitle {
   color: $black;
+}
+
+a, 
+[class*="link"] {
+  color: $link-color; 
+}
+
+button, 
+.button {
+  color: $button-color;
+  background: $button-background;
 }

@@ -84,6 +84,7 @@ section.benefits.container
   //-  benefits scroll link 
   a#benefits(name="benefits")
 
+  //- почему бы не убрать эту карточки?
   h2#title.title= text.features.title
   article
     figure.flex-center.column.benefit-cards.text-center

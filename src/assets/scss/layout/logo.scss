@@ -1,7 +1,12 @@
-:root {
-  --logo-base-size: 30vw;
-}
+$logo-base-size: 50vw;
+$logo-landscape-size: 20vw;
 
 .logo {
-  max-width: var(--logo-base-size);
+  max-width: $logo-base-size;
+  
+  @include from($landscape) {
+    max-width: $logo-landscape-size;
+  }
 }
+
+

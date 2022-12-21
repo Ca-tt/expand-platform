@@ -1,7 +1,11 @@
 @import './variables.scss';
 @import './reset.scss';
 @import './colors.scss';
-@import './helper.scss';
+@import './helpers.scss';
+@import './defaults.scss';
 @import './animations.scss';
-@import './fonts.scss';
+@import './fonts/fonts.scss';
 @import './spacing.scss';
+@import './media/media.scss';
+@import './visibility.scss';
+@import './flex/flex.scss';

@@ -1,0 +1,51 @@
+
+
+
+@mixin to($resolution) {
+  @media screen and (max-width: $resolution) {
+    @content;
+  }
+}
+
+@mixin hidden-to($resolution) {
+  @media screen and (max-width: $resolution) {
+    display: none;
+  }
+}
+
+@mixin from($resolution) {
+  @media screen and (min-width: $resolution) {
+    @content;
+  }
+}
+
+/* ready-to-use-mixins (min-width) */
+@mixin from-landscape {
+  @include from($landscape) {
+    @content;
+  }
+}
+
+@mixin from-tablet {
+  @include from($tablet) {
+    @content;
+  }
+}
+
+@mixin from-laptop {
+  @include from($desktop) {
+    @content;
+  }
+}
+
+@mixin from-hd {
+  @include from($hd) {
+    @content;
+  }
+}
+
+@mixin from-fullhd {
+  @include from($fullhd) {
+    @content;
+  }
+}
